@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackground"
+    tools:context=".View.HostingRoom.RoomLocationActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppBarLayoutTheme">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            android:backgroundTint="@color/colorBackground"
+            android:background="@color/colorBackground"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="5dp"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="16dp"
+            android:text="Vị trí phòng"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true">
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/get_location_btn"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginVertical="5dp"
+                        android:paddingHorizontal="30dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Sử dụng vị trí hiện tại"
+                        android:onClick="getLocation"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        app:icon="@drawable/ic_baseline_location_on_24"
+                        app:iconGravity="textEnd"
+                        app:iconSize="30dp"
+                        app:iconPadding="20dp"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/colorPrimaryDark"
+                        app:cornerRadius="10dp">
+                    </com.google.android.material.button.MaterialButton>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/contry_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Quốc gia"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/contry_menu"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Chọn quốc gia">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/country_actv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/province_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Tỉnh/ Thành phố"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/province_menu"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Chọn tỉnh/ thành phố">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/province_actv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/district_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Quận/ Huyện"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/district_menu"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Chọn quận/ huyện">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/district_actv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/commune_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Xã/ Phường"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/commune_menu"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Chọn xã/ phường">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/commune_actv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/address_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Địa chỉ"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/address_edt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:hint="Số nhà, tên đường"
+                                    android:scrollbars="vertical"
+                                    android:inputType="textMultiLine"
+                                    android:gravity="top|left"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/description_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Mô tả, chỉ dẫn"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/description_edt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:minLines="6"
+                                    android:hint="Mô tả, chỉ dẫn tới địa chỉ"
+                                    android:scrollbars="vertical"
+                                    android:inputType="textMultiLine"
+                                    android:gravity="top|left"
+                                    tools:ignore="RtlHardcoded" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginVertical="5dp"
+                android:paddingHorizontal="30dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:onClick="Next"
+                android:text="@string/continueStr"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                app:icon="@drawable/ic_baseline_arrow_right_24"
+                app:iconGravity="textEnd"
+                app:iconSize="30dp"
+                app:iconPadding="0dp"
+                app:cornerRadius="10dp">
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

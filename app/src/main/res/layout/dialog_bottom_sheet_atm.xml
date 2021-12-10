@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetNumberOfPeople"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_red_corner_top_left_top_right_16">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginHorizontal="28dp"
+            app:icon="@drawable/ic_baseline_clear_24"
+            app:iconTint="@color/colorWhite"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/close_btn"
+            android:text="@string/add_card_info"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <com.craftman.cardform.CardForm
+        android:id="@+id/cardForm"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="20dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/completed_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hoàn tất"
+        android:textSize="18sp"
+        android:layout_marginHorizontal="28dp"
+        android:textAllCaps="false"
+        android:paddingVertical="10dp"
+        android:layout_marginVertical="10dp"
+        app:cornerRadius="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackground"
+    tools:context=".View.HostingRoom.RoomContactActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppBarLayoutTheme">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin"
+            android:backgroundTint="@color/colorBackground"
+            android:background="@color/colorBackground"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="5dp"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="16dp"
+                android:text="Liên hệ"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true">
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/contact_type_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Hình thức liên hệ"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/contact_type_menu"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Chọn hình thức liên hệ">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/contact_actv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/contact_info_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Thông tin liên hệ"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/contact_info_edt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:scrollbars="vertical"
+                                android:inputType="textMultiLine"
+                                android:gravity="top|left"
+                                tools:ignore="RtlHardcoded" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/payment_type_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Hình thức thanh toán"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/payment_type_menu"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Chọn hình thức thanh toán">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/payment_actv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/hoster_info_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Tên người thụ hưởng"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/hoster_info_edt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:scrollbars="vertical"
+                                android:inputType="textMultiLine"
+                                android:gravity="top|left"
+                                tools:ignore="RtlHardcoded" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/bank_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Ngân hàng"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/bank_menu"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Chọn ngân hàng">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/bank_actv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="none"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/account_tv"
+                            android:paddingLeft="14dp"
+                            android:paddingRight="14dp"
+                            android:layout_marginTop="14dp"
+                            android:text="Số tài khoản"
+                            android:textColor="@color/colorPrimaryText"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/account_edt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:scrollbars="vertical"
+                                android:inputType="textMultiLine"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="top|left"
+                                tools:ignore="RtlHardcoded" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continue_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="28dp"
+                android:layout_marginVertical="10dp"
+                android:paddingHorizontal="30dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Xác Nhận"
+                android:onClick="Next"
+                android:textSize="18sp"
+                android:textAllCaps="false"
+                app:cornerRadius="10dp">
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

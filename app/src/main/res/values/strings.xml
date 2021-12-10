@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">AirBnB</string>
+
+    <string name="search_your_recipes">Search Your Recipes…</string>
+    <string name="meal_categories">Meal Categories</string>
+    <string name="Recipes">Recipes</string>
+    <string name="location">Vị trí</string>
+    <string name="description">Mô tả</string>
+    <string name="room_layout">Bố trí phòng</string>
+    <string name="convenience">Tiện nghi</string>
+    <string name="rate">Đánh giá</string>
+    <string name="name">Tên</string>
+    <string name="date">tháng mm năm YYYY</string>
+    <string name="rule">Quy định</string>
+    <string name="book">Đặt phòng</string>
+    <string name="currency_unit">VND / ngày</string>
+    <string name="your_trip">Chuyến đi của bạn</string>
+    <string name="day_check_in_check_out">Ngày đặt phòng - trả phòng</string>
+    <string name="check_in_time">Giờ nhận phòng</string>
+    <string name="edit"><u>Chỉnh sửa</u></string>
+    <string name="number_of_people">Số người</string>
+    <string name="inbox_to_host">Nhắn tin cho chủ nhà</string>
+    <string name="note_for_inbox">Cho chủ nhà biết những mong muốn của bạn khi nhận phòng</string>
+    <string name="message">Lời nhắn</string>
+    <string name="continueStr">Tiếp theo</string>
+    <string name="adult">Người lớn</string>
+    <string name="kid">Trẻ em</string>
+    <string name="delete"><u>Xóa</u></string>
+    <string name="completed">Hoàn tất</string>
+    <string name="save">Lưu</string>
+    <string name="cancel"><u>Hủy bỏ</u></string>
+    <string name="card_number">Số thẻ</string>
+    <string name="expiration_date">Ngày hết hạn</string>
+    <string name="cvv_code">Mã CVV</string>
+    <string name="postal_code">Mã bưu chính</string>
+    <string name="country_or_region">Quốc gia/Khu vực</string>
+    <string name="one_person">1 người</string>
+    <string name="time_example">09:00</string>
+    <string name="price_detail">Chi tiết giá</string>
+    <string name="service_price">Giá dịch vụ</string>
+    <string name="cleaning_price">Phí vệ sinh</string>
+    <string name="total_price">Tổng (VND)</string>
+    <string name="payment_method">Phương thức thanh toán</string>
+    <string name="visa">Thẻ thanh toán quốc tế VISA</string>
+    <string name="pay_pal">PayPal</string>
+    <string name="atm">Thẻ ATM nội địa</string>
+    <string name="pay">Thanh toán</string>
+    <string name="add_card_info">Thêm thông tin thẻ</string>
+    <string name="show_all">Hiển thị tất cả</string>
+    <string name="show_more"> Xem thêm</string>
+    <string name="show_more_trim_line">\n Xem thêm</string>
+    <string name="show_less">  Ẩn bớt</string>
+    <string name="choose_another_method">Chọn phương thức khác</string>
+    <string name="empty_error">Thông tin bắt buộc</string>
+    <string name="country">Country</string>
+    <string name="instructions">INSTRUCTIONS</string>
+    <string name="dot_loading">...</string>
+    <string name="Ingredients">INGREDIENTS</string>
+    <string name="youtube">YOUTUBE</string>
+    <string name="source">SOURCE</string>
+    <string name="favorite">Favorite</string>
+    <string name="write_rating">Viết đánh giá</string>
+    <string name="scores_example">4.5</string>
+
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="true">AIzaSyBAbpbYPQNydgP83_WkCV8DRf0QJb0XbQc</string>
+    <string name="title_activity_login">Đăng Nhập</string>
+    <string name="username">Tên Đăng Nhập</string>
+    <string name="password">Mật Khẩu</string>
+    <string name="register">Đăng Ký</string>
+    <string name="signin">Đăng Nhập</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="login">ĐĂNG NHẬP</string>
+    <string name="search_content">Bạn Sắp Đi Đâu ?</string>
+</resources>
